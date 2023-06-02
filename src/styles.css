@@ -1,1 +1,32 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-image: url("https://images.theconversation.com/files/196086/original/file-20171123-18017-sha2ml.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1356&h=668&fit=crop");
+  height: 100vh;
+  color: #000000;
+}
+
+
+/* Media query for tablet-sized screens */
+@media (max-width: 768px) {
+  body {
+    background-size: cover;
+  }
+}
+
+/* Media query for mobile-sized screens */
+@media (max-width: 576px) {
+  body {
+    background-size: cover;
+    background-position: center;
+  }
+}

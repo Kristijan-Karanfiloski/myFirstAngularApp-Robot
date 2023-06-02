@@ -1,0 +1,46 @@
+<div class="row search-box text-center mt-5">
+  <div class="col-md-4">
+    <h4>Choose your robot:</h4>
+    <form [formGroup]="searchForm">
+      <div class="form-group text-center">
+        <label class="col search-label">
+          <input
+            class="form-control w-100"
+            name="text"
+            placeholder="Type here..."
+            type="text"
+            id="search"
+            formControlName="search"
+          />
+        </label>
+        <span
+          *ngIf="!searchForm.controls.search.valid && searchForm.controls.search.touched"
+          class="help-block error-message"
+        >
+          Pick your robot!
+        </span>
+      </div>
+    </form>
+  </div>
+<!---->
+  <div class="col-md-8 mt-4">
+    <div class="row flex-wrap">
+      <div class="col-6 col-md-4 col-lg-3" *ngFor="let char of charList">
+        <div *ngIf="isFetching" class="card mb-3" style="max-width: 18rem;">
+          <img [src]="char.image" class="card-img-top" [alt]="char.name" />
+          <div class="card-body">
+            <h5 class="card-title">
+              {{ char.firstName }} {{ char.lastName }}
+            </h5>
+            <p class="card-text">Gender: {{ char.gender }}</p>
+            <p class="card-text">Age: {{ char.age }}</p>
+            <p class="card-text">Height: {{ char.height }}cm</p>
+          </div>
+        </div>
+      </div>
+      <div *ngIf="isFetching">
+        <app-loading-spinner></app-loading-spinner>
+      </div>
+    </div>
+  </div>
+</div>
