@@ -44,15 +44,11 @@ export class SearchCharPageComponent implements OnInit {
           );
         })
       )
-      .subscribe(
-        (responseData) => {
-          // this.charList = responseData.users;
-          this.charList = responseData;
-          console.log('ResponseData:', responseData);
-        },
-        () => {
-          this.isFetching = false;
-        }
-      );
+      .subscribe((responseData) => {
+        // this.charList = responseData.users;
+        this.charList = responseData;
+        this.isFetching = false;
+        console.log('ResponseData:', responseData);
+      });
   }
 }
