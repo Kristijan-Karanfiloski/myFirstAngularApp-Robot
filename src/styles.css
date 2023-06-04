@@ -11,7 +11,7 @@ body {
   background-repeat: no-repeat;
   background-position: bottom;
   background-image: url("https://images.theconversation.com/files/196086/original/file-20171123-18017-sha2ml.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1356&h=668&fit=crop");
-  height: 100vh;
+  min-height: 100vh;
   color: #000000;
 }
 
